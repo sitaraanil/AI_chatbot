@@ -33,6 +33,7 @@ with st.sidebar:
 
  
 load_dotenv()
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
 def generate_embeddings(texts, model_name="sentence-transformers/all-MiniLM-L6-v2"):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
