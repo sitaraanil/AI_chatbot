@@ -9,3 +9,4 @@ tiktoken
 transformers
 sentence-transformers
 torch
+langchain-community
