@@ -1,0 +1,11 @@
+langchain
+PyPDF2
+python-dotenv
+streamlit
+faiss-cpu
+streamlit-extras
+openai
+tiktoken
+transformers
+sentence-transformers
+torch
