@@ -20,10 +20,10 @@ import os
 import openai
  
 with st.sidebar:
-    st.title('🤗💬 LLM Chat App')
+    st.title('🤗💬 Policy Summariser AI App')
     st.markdown('''
     ## About
-    This app is an LLM-powered chatbot built using:
+    This app is an LLM-powered AI chatbot built using:
     - [Streamlit](https://streamlit.io/)
     - [LangChain](https://python.langchain.com/)
     - [OpenAI](https://platform.openai.com/docs/models) LLM model
@@ -33,6 +33,7 @@ with st.sidebar:
 
  
 load_dotenv()
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
 def generate_embeddings(texts, model_name="sentence-transformers/all-MiniLM-L6-v2"):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
